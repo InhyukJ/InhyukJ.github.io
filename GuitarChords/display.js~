@@ -1,0 +1,13 @@
+function displayChords() {
+    var x = document.getElementById("form1");
+    var text = "";
+    var i;
+    for (i = 0;i < x.elements.length;i++) {
+	var chord = x.elements[i].value;
+	if ("checked".equals(chord)) {
+	    if (chord.contains("/")) chord = chord.replace("/", "");
+	    text += "<img src='/chordImages/" + chord + ".png' height='20' width='20'>";
+	}
+    }
+    document.getElementById("images").innerHTML = text;
+}

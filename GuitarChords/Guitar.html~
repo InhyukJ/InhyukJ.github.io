@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h>
+      GUITAR CHORDS
+    </h>
+    <form action="Chords">
+      <fieldset>
+	<legend>Select your chords:</legend>
+	<table>
+	  <tr>
+	    <th>A Chords</th>
+	    <td><input type="checkbox" name="A">A</td>
+	    <td><input type="checkbox" name="A#m">A#m</td>
+	    <td><input type="checkbox" name="A7">A7</td>
+	    <td><input type="checkbox" name="Am">Am</td>
+	    <td><input type="checkbox" name="Am7">Am7</td>
+	    <td><input type="checkbox" name="Asus4">Asus4</td>
+	  </tr>
+	  <tr>
+	    <th>B Chords</th>
+	    <td><input type="checkbox" name="B">B</td>
+	    <td><input type="checkbox" name="B#m">B#m</td>
+	    <td><input type="checkbox" name="Bb">Bb</td>
+	    <td><input type="checkbox" name="Bm">Bm</td>
+	    <td><input type="checkbox" name="Bm11">Bm11</td>
+	  </tr>
+	  <tr>
+	    <th>C Chords</th>
+	    <td><input type="checkbox" name="C">C</td>
+	    <td><input type="checkbox" name="C/E">C/E</td>
+	    <td><input type="checkbox" name="C#">C#</td>
+	    <td><input type="checkbox" name="C#7">C#7</td>
+	    <td><input type="checkbox" name="C#m">C#m</td>
+	    <td><input type="checkbox" name="Cm">Cm</td>
+	  </tr>
+	  <tr>
+	    <th>D Chords</th>
+	    <td><input type="checkbox" name="D">D</td>
+	    <td><input type="checkbox" name="D7#sus4">D#7sus4</td>
+	    <td><input type="checkbox" name="D7">D7</td>
+	    <td><input type="checkbox" name="D7sus4">D7sus4</td>
+	    <td><input type="checkbox" name="D/F#"></td>
+	    <td><input type="checkbox" name="Dm">Dm</td>
+	    <td><input type="checkbox" name="Dm6">Dm6</td>
+	  </tr>
+	  <tr>
+	    <th>E Chords</th>
+	    <td><input type="checkbox" name="E">E</td>
+	    <td><input type="checkbox" name="E/G#">E/G#</td>
+	    <td><input type="checkbox" name="E7">E7</td>
+	    <td><input type="checkbox" name="Em">Em</td>
+	    <td><input type="checkbox" name="Em/G">Em/G</td>
+	    <td><input type="checkbox" name="Em7">Em7</td>
+	  </tr>
+	  <tr>
+	    <th>F Chords</th>
+	    <td><input type="checkbox" name="F">F</td>
+	    <td><input type="checkbox" name="F#">F#</td>
+	    <td><input type="checkbox" name="F#7">F#7</td>
+	    <td><input type="checkbox" name="F#m">F#m</td>
+	    <td><input type="checkbox" name="F#m7">F#m7</td>
+	    <td><input type="checkbox" name="F#m11">F#m11</td>
+	    <td><input type="checkbox" name="F7">F7</td>
+	    <td><input type="checkbox" name="Fm">Fm</td>
+	  </tr>
+	  <tr>
+	    <th>G Chords</th>
+	    <td><input type="checkbox" name="G">G</td>
+	    <td><input type="checkbox" name="G#">G#</td>
+	    <td><input type="checkbox" name="G#m11">G#m11</td>
+	    <td><input type="checkbox" name="G#m13">G#m13</td>
+	    <td><input type="checkbox" name="Gsus4">Gsus4</td>
+	  </tr>
+	</table>
+	<input type="Display Chords">
+      </fieldset>
+    </form>
+    <hr>
+  </body>
+</html>
