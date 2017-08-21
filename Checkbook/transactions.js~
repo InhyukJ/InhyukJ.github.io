@@ -1,0 +1,4 @@
+function addTransaction() {
+    var x = document.getElementById("form2").elements;
+    document.getElementById("test").innerHTML = "index0: " + x.item(0).value + "<br>" + "index1: " + x.item(1).value + "<br>index2: " + x.item(2).value;
+}

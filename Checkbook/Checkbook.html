@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Checkbook</title>
+  </head>
+  <body>
+    <h>
+      LOGIN
+    </h>
+    <br><br>
+    <form id="form1" action="/action_page.php">
+      <fieldset>
+	<legend>Enter your ID and Password:</legend>
+	      ID: <input type="text" id="ID"><br>
+	Password: <input type="password" id="Password"><br>
+      </fieldset>
+    </form><br>
+    <button onclick="displayBook()">Login</button>
+    <hr>
+    <p id="transactions">
+    </p>
+    <!--
+    <p id="data" hidden>
+      Date,Event,Change(Won),Balance(Won),8/16/17,Test,-21.99(-25042.87),77.27(88000)
+    </p>
+    -->
+    <iframe id="file" src="data.txt" onload="loadFile()" style="display: none"></iframe>      
+
+    <div id="div1" style="display: none">
+      <form id="form2">
+	<fieldset>
+	  <legend>Add Transaction</legend>
+	  Date: <input type="date" id="date"><br><br>Event: <input type="text" id="event"><br><br>Change: <input type="number" id="change">
+	</fieldset>
+      </form>
+      <button onclick="addTransaction()">Add Transaction</button>
+    </div>
+           
+    <script src="check.js"></script><br>
+  </body>
+</html>
