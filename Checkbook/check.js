@@ -51,5 +51,7 @@ function displayForm() {
 }
 
 function addTransaction() {
-    document.getElementById("transactions").innerHTML += "<br>addTransaction() activated";
+    //document.getElementById("transactions").innerHTML += "<br>addTransaction() activated";
+    var date = document.getElementById("date").value;
+    document.getElementById("transactions") += date;
 }
