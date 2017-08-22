@@ -51,9 +51,11 @@ function displayForm() {
 }
 
 function addTransaction() {
-    //document.getElementById("transactions").innerHTML += "<br>addTransaction() activated";
-    //var form2 = document.getElementById("form2");
-    //var date = form2.item(1).value;
     var date = document.getElementById("date").value;
-    document.getElementById("transactions").innerHTML += date;
+    var event = document.getElementById("event").value;
+    var change = document.getElementById("change").value;
+    var balance = 0.0;
+	
+    
+    //document.getElementById("transactions").innerHTML += date;
 }
