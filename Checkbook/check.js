@@ -28,6 +28,9 @@ function checkCredentials() {
 
 function loadFile() {
     document.getElementById("transactions").innerHTML += "<br>loadFile() activated";
+    var frame = document.getElementById("file");
+    var rawStr = frame.contentWindow.document.body.childNodes[0].innerHTML;
+    document.getElementById("transactions").innerHTML += "<br>" + rawStr;
 }
 
 function displayData(data) {
