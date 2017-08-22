@@ -1,11 +1,7 @@
 function displayBook() {  
-    if (checkCredentials()) { //WEB STORAGE
-	//arbitary data
-	var data = ["Date","Event","Change(Won)","Balance(Won)"];
-	localStorage.setItem("data",JSON.stringify(data));
-
-        var result = JSON.parse(localStorage.getItem("data"));
-	displayData(result);
+    if (checkCredentials()) {
+	//displayData(result);
+	displayForm();
     }
     else {
 	document.getElementById("transactions").innerHTML = "<b>THE ID AND/OR THE PASSWORD IS INCORRECT. PLEASE TRY AGAIN.</b>";
@@ -29,6 +25,18 @@ function checkCredentials() {
 	return false;
     }
 }
+
+function loadFile() {
+    document.getElementById("transactions").innerHTML += "<br>loadFile() activated";
+    var frame = document.getElementById("iFrameFile");
+    document.getElementById("transactions").innerHTML += "<br>var frame";
+   
+    var rawStr = frame.contents();
+
+    document.getElementById("transactions").innerHTML += "<br>" + rawStr;
+    //document.getElementById("transactions").innerHTML += "<br>rawStr";// + rawStr;
+}
+
 function displayData(data) {
     var returnStr = "<table>";
     
@@ -40,5 +48,13 @@ function displayData(data) {
     returnStr += "</table>";
 
     var form = "<form id='form2' action='/action_page.php'><fieldset><legend>Add Transaction</legend>Date: <input type='date' id='date'><br><br>Event: <input type='text' id='event'><br><br>Change: <input type='number' id='change'></fieldset></form><button onclick='addTransaction()'>Add Transaction</button><p id='test'></p><script src='transactions.js'></script>";
-    document.getElementById("transactions").innerHTML = returnStr + form;
+    //document.getElementById("transactions").innerHTML = returnStr + form;
+}
+
+function displayForm() {
+    document.getElementById("div1").style.display = "block";
+}
+
+function addTransaction() {
+    document.getElementById("transactions").innerHTML += "<br>addTransaction() activated";
 }
