@@ -33,8 +33,7 @@ function loadFile() {
    
     var rawStr = frame.contentDocument.body.firstChild.innerHTML;
 
-    document.getElementById("transactions").innerHTML += "<br>" + rawStr;
-    //document.getElementById("transactions").innerHTML += "<br>rawStr";// + rawStr;
+    document.getElementById("transactions").innerHTML += "<br>" + rawStr + "<br>test1";
 }
 
 function displayData(data) {
