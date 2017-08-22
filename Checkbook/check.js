@@ -1,5 +1,6 @@
 function displayBook() {  
     if (checkCredentials()) {
+	loadFile();
 	//displayData(result);
 	displayForm();
     }
@@ -33,7 +34,7 @@ function loadFile() {
    
     var rawStr = frame.contentDocument.body.firstChild.innerHTML;
 
-    document.getElementById("transactions").innerHTML += "<br>" + rawStr + "<br>test1";
+    document.getElementById("transactions").innerHTML = "<br>" + rawStr;
 }
 
 function displayData(data) {
