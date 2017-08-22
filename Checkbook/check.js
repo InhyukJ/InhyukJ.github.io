@@ -1,7 +1,7 @@
 function displayBook() {  
     if (checkCredentials()) {
-	loadFile();
-	//displayData(result);
+	var rawStr = loadFile();
+	displayData(rawStr);
 	displayForm();
     }
     else {
@@ -28,27 +28,22 @@ function checkCredentials() {
 }
 
 function loadFile() {
-    document.getElementById("transactions").innerHTML += "<br>loadFile() activated";
     var frame = document.getElementById("iFrameFile");
-    document.getElementById("transactions").innerHTML += "<br>var frame";
-   
     var rawStr = frame.contentDocument.body.firstChild.innerHTML;
-
-    document.getElementById("transactions").innerHTML = "<br>" + rawStr;
+    return rawStr;
 }
 
-function displayData(data) {
+function displayData(rawStr) {
+    var rawArray = rawStr.split(",");
     var returnStr = "<table>";
     
-    for (i = 0;i < data.length;i++) {
- 	if (i % 4 == 0) returnStr += "<tr><td>" + data[i] + "</td>";
-	else if (i % 4 == 3) returnStr += "<td>" + data[i] + "</td></tr>";
-	else returnStr += "<td>" + data[i] + "</td>";
+    for (i = 0;i < rawArray.length;i++) {
+ 	if (i % 4 == 0) returnStr += "<tr><td>" + rawArray[i] + "</td>";
+	else if (i % 4 == 3) returnStr += "<td>" + rawArray[i] + "</td></tr>";
+	else returnStr += "<td>" + rawArray[i] + "</td>";
     }
     returnStr += "</table>";
-
-    var form = "<form id='form2' action='/action_page.php'><fieldset><legend>Add Transaction</legend>Date: <input type='date' id='date'><br><br>Event: <input type='text' id='event'><br><br>Change: <input type='number' id='change'></fieldset></form><button onclick='addTransaction()'>Add Transaction</button><p id='test'></p><script src='transactions.js'></script>";
-    //document.getElementById("transactions").innerHTML = returnStr + form;
+    document.getElementById("transactions").innerHTML += returnStr;
 }
 
 function displayForm() {
