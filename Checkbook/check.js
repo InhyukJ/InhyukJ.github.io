@@ -28,9 +28,13 @@ function checkCredentials() {
 
 function loadFile() {
     document.getElementById("transactions").innerHTML += "<br>loadFile() activated";
-    var frame = document.getElementById("file");
-    var rawStr = frame.contentWindow.document.body.childNodes[0].innerHTML;
+    var frame = document.getElementById("iFrameFile");
+    document.getElementById("transactions").innerHTML += "<br>var frame";
+   
+    var rawStr = frame.contents();
+
     document.getElementById("transactions").innerHTML += "<br>" + rawStr;
+    //document.getElementById("transactions").innerHTML += "<br>rawStr";// + rawStr;
 }
 
 function displayData(data) {
