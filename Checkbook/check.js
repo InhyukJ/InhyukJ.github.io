@@ -31,7 +31,7 @@ function loadFile() {
     var frame = document.getElementById("iFrameFile");
     document.getElementById("transactions").innerHTML += "<br>var frame";
    
-    var rawStr = frame.contentDocument || frame.contentWindow.document;
+    var rawStr = frame.contentWindow.document;
 
     document.getElementById("transactions").innerHTML += "<br>" + rawStr;
     //document.getElementById("transactions").innerHTML += "<br>rawStr";// + rawStr;
