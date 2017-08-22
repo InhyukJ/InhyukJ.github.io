@@ -52,6 +52,8 @@ function displayForm() {
 
 function addTransaction() {
     //document.getElementById("transactions").innerHTML += "<br>addTransaction() activated";
-    var date = document.getElementById("date").value;
+    var form2 = document.getElementById("form2");
+    var date = form2.item(1).value;
+    //var date = document.getElementById("date").value;
     document.getElementById("transactions") += date;
 }
